@@ -1,0 +1,15 @@
+name: Mirror Github and Gitee
+on: [push]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hub Mirror Action.
+        uses: Yikun/hub-mirror-action@v1.2
+        with:
+          src: github/amorphobia
+          dst: gitee/amorphobia
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: "mirror-test"
