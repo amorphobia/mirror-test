@@ -10,5 +10,5 @@ jobs:
         with:
           src: github/amorphobia
           dst: gitee/amorphobia
-          dst_token: ${{ secrets.GITEE_TOKEN }}
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           static_list: "mirror-test"
